@@ -598,7 +598,7 @@ public class FirebasePlugin extends CordovaPlugin {
       cordova.getThreadPool().execute(new Runnable() {
         public void run() {
             try {
-                byte[] bytes = FirebaseRemoteConfig.getInstance().getByteArray(key)
+                byte[] bytes = FirebaseRemoteConfig.getInstance().getByteArray(key);
                 JSONObject object = new JSONObject();
                 object.put("base64", Base64.encodeToString(bytes, Base64.DEFAULT));
                 object.put("array", new JSONArray(bytes));
